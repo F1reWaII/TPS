@@ -9,6 +9,9 @@ public class FireBallManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         Invoke("DestroyFireInTheHole", lifeTime);
     }
 

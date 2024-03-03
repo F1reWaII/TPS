@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,12 +9,17 @@ public class Enemy_W5 : MonoBehaviour
     public Transform Player;
     public float ViewAngle = 90;
     public float MinDetectDistance = 3;
+    public float damage = 200;
+    private float _timer;
+
+    private PlayerHealth _playerHealth;
 
     NavMeshAgent _navMeshAgent;
 
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _playerHealth= Player.GetComponent<PlayerHealth>();
     }
 
     void Update()
@@ -25,6 +31,17 @@ public class Enemy_W5 : MonoBehaviour
         else
         {
             Patrol();
+        }
+
+        AttackUpdate();
+
+    }
+
+    void AttackUpdate()
+    {
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        {
+            _playerHealth.DealDamaged(damage * Time.deltaTime);
         }
     }
 
