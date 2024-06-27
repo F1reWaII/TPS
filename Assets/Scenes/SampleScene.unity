@@ -403,6 +403,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2262394877512672279, guid: 22e95603c9f032642a689145e198538f,
         type: 3}
+    - target: {fileID: 5449505684852597306, guid: 691dd7e326bb3d54fb2b8bc09d8dfd3c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000045776367
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449505684852597306, guid: 691dd7e326bb3d54fb2b8bc09d8dfd3c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000009536743
+      objectReference: {fileID: 0}
     - target: {fileID: 7739496969711589383, guid: 691dd7e326bb3d54fb2b8bc09d8dfd3c,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -507,6 +517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: targetInSkyDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085765041621412353, guid: 691dd7e326bb3d54fb2b8bc09d8dfd3c,
+        type: 3}
+      propertyPath: healthValue
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691dd7e326bb3d54fb2b8bc09d8dfd3c, type: 3}
@@ -4146,8 +4161,8 @@ MonoBehaviour:
   - {fileID: 555552031}
   - {fileID: 915369964}
   Player: {fileID: 2114959989}
-  ViewAngle: 90
-  MinDetectDistance: 2
+  ViewAngle: 85
+  MinDetectDistance: 1
   damage: 200
 --- !u!195 &1897027745
 NavMeshAgent:
@@ -4501,19 +4516,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &2114959995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114959988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5e760955b2859438c6ec4eeef79c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthValue: 1000
 --- !u!1001 &2121955659
 PrefabInstance:
   m_ObjectHideFlags: 0
